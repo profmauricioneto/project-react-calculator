@@ -1,0 +1,21 @@
+image: gitpod/workspace-full
+
+# this task inialize and run the application
+tasks:
+  - name: Install and Run Application
+    before: cd react-calculator
+    init: npm install
+    command: npm start
+
+ports:
+  - name: Executing
+    description: Executing Calculator on Port 3000
+    port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - dsznajder.es7-react-js-snippets
+    - ecmel.vscode-html-css
+    - xabikos.JavaScriptSnippets
+    - shellscape.shellscape-brackets
